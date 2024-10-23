@@ -17,6 +17,7 @@ public class MetodoPago extends javax.swing.JFrame {
      */
     public MetodoPago() {
         initComponents();
+        setLocationRelativeTo(null);
     }
     
 

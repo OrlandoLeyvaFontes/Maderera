@@ -169,7 +169,7 @@ public class DetallesProducto extends javax.swing.JFrame {
 
     private void btnComprarAhoraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnComprarAhoraActionPerformed
         setVisible(false);
-        ConfirmarCompra cc = new ConfirmarCompra();
+        ConfirmarCompra cc = new ConfirmarCompra(this.madera, this.maderaNegocio);
         cc.setVisible(true);
     }//GEN-LAST:event_btnComprarAhoraActionPerformed
 

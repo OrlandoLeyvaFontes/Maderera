@@ -17,6 +17,8 @@ public class DatosTarjeta extends javax.swing.JFrame {
      */
     public DatosTarjeta() {
         initComponents();
+        setLocationRelativeTo(null);
+        
     }
 
     /**

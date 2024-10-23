@@ -29,6 +29,7 @@ presentacion\ConfirmarCompra.class
 presentacion\ConfirmarCompra$3.class
 persistencia\MadereraTablaDao.class
 presentacion\AgregarMadera.class
+presentacion\ConfirmarCompra$5.class
 presentacion\DetallesProducto.class
 presentacion\MenuMadera$2.class
 Negocio\MaderaNegocio.class
