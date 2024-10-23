@@ -21,5 +21,6 @@ public class Main {
 
         InicioSesion inicioSesion = new InicioSesion(iMadereraNegocio);
         inicioSesion.setVisible(true);
+        
     }
 }

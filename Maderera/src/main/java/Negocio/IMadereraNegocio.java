@@ -14,7 +14,7 @@ import java.util.List;
  */
 public interface IMadereraNegocio {
 
-    public void agregarMadera(MadereraDTO madereraDTO);
+    public Maderera agregarMadera(MadereraDTO madereraDTO);
 
     public List<MadereraDTO> obtenerMaderas();
 }

@@ -20,6 +20,9 @@ public class InicioSesion extends javax.swing.JFrame {
     public InicioSesion(IMadereraNegocio maderaNegocio) {
         this.maderaNegocio = maderaNegocio;
         initComponents();
+        setSize(400, 300);  
+        setResizable(false);  
+        setLocationRelativeTo(null);
     }
 
     /**

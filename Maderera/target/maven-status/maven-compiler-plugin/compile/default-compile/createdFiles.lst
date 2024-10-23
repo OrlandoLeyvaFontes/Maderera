@@ -23,6 +23,7 @@ presentacion\MetodoPago$4.class
 Negocio\IMadereraNegocio.class
 persistencia\IMadereraDAO.class
 presentacion\DatosTarjeta$3.class
+presentacion\MenuMadera$3.class
 presentacion\AgregarMadera$3.class
 presentacion\ConfirmarCompra.class
 presentacion\ConfirmarCompra$3.class

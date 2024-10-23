@@ -16,21 +16,29 @@ import persistencia.IMadereraDAO;
  */
 public class MaderaNegocio implements IMadereraNegocio {
 
-    private IMadereraDAO iMadereraDAO;
+    private final IMadereraDAO iMadereraDAO;
 
     public MaderaNegocio(IMadereraDAO iMadereraDAO) {
         this.iMadereraDAO = iMadereraDAO;
     }
 
-    public void agregarMadera(MadereraDTO madereraDTO) {
+    @Override
+    public Maderera agregarMadera(MadereraDTO madereraDTO) {
         Maderera maderera = new Maderera();
         maderera.setId(madereraDTO.getId());
         maderera.setNombre(madereraDTO.getNombre());
         maderera.setDescripcion(madereraDTO.getDescripcion());
         maderera.setCantidad(madereraDTO.getCantidad());
-        iMadereraDAO.agregarMadera(maderera);
+        try {
+            iMadereraDAO.agregarMadera(maderera);
+            return maderera;
+        } catch (Exception e) {
+            System.out.println("Error al agregar la madera: " + e.getMessage());
+            return null;
+        }
     }
 
+    @Override
     public List<MadereraDTO> obtenerMaderas() {
         List<Maderera> maderas = iMadereraDAO.obtenerMaderas();
         return maderas.stream()

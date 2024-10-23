@@ -12,9 +12,6 @@ import java.util.List;
  * @author Oley
  */
 public interface IMadereraDAO {
-
-    public void agregarMadera(Maderera madera);
-
-    public List<Maderera> obtenerMaderas();
-
+    void agregarMadera(Maderera madera);
+    List<Maderera> obtenerMaderas();
 }

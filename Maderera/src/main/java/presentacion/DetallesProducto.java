@@ -4,20 +4,49 @@
  */
 package presentacion;
 
+import Negocio.MaderaNegocio;
+import dto.MadereraDTO;
+
 /**
  *
  * @author rober
  */
 public class DetallesProducto extends javax.swing.JFrame {
 
+     private MadereraDTO madera;
+    private MaderaNegocio maderaNegocio;
     
+   
     
-    /**
-     * Creates new form DetallesProducto
-     */
-    public DetallesProducto() {
-        initComponents();
+    private void inicializarComponentes() {
+    setLocationRelativeTo(null);  // Centra la ventana
+    // Deshabilita la edición de los campos
+    txtID.setEditable(false);
+    txtNombre.setEditable(false);
+    txtDescripcion.setEditable(false);
+    txtCantidad.setEditable(false);
     }
+    
+    private void mostrarDetalles() {
+    // Muestra los detalles del producto seleccionado
+    txtID.setText(String.valueOf(madera.getId()));
+    txtNombre.setText(madera.getNombre());
+    txtDescripcion.setText(madera.getDescripcion());
+    txtCantidad.setText(String.valueOf(madera.getCantidad()));
+    }
+    
+    public DetallesProducto(MadereraDTO madera, MaderaNegocio maderaNegocio) {
+    initComponents();
+    this.madera = madera;
+    this.maderaNegocio = maderaNegocio;
+    inicializarComponentes();
+    mostrarDetalles();
+}
+    
+    public DetallesProducto() {
+    initComponents();
+    setLocationRelativeTo(null);
+}
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -133,7 +162,9 @@ public class DetallesProducto extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnVolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVolverActionPerformed
-        // TODO add your handling code here:
+        setVisible(false);
+        AgregarMadera am = new AgregarMadera();
+        am.setVisible(true);
     }//GEN-LAST:event_btnVolverActionPerformed
 
     private void btnComprarAhoraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnComprarAhoraActionPerformed
