@@ -1,30 +1,27 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package dto;
 
-/**
- *
- * @author Oley
- */
 public class MadereraDTO {
-
     private int id;
     private String nombre;
     private String descripcion;
     private int cantidad;
+    private double precioUnitario;
 
+    // Constructor vacío
     public MadereraDTO() {
     }
 
-    public MadereraDTO(int id, String nombre, String descripcion, int cantidad) {
+    // Constructor completo
+    public MadereraDTO(int id, String nombre, String descripcion, int cantidad, double precioUnitario) {
         this.id = id;
         this.nombre = nombre;
         this.descripcion = descripcion;
         this.cantidad = cantidad;
+        this.precioUnitario = precioUnitario;
     }
 
+    // Getters y setters
     public int getId() {
         return id;
     }
@@ -56,5 +53,15 @@ public class MadereraDTO {
     public void setCantidad(int cantidad) {
         this.cantidad = cantidad;
     }
+
+    
+    public void setPrecioUnitario(double precioUnitario) {
+        this.precioUnitario = precioUnitario;
+    }
+    public double getPrecioUnitario() {
+        return precioUnitario;
+    }
+
+   
 
 }

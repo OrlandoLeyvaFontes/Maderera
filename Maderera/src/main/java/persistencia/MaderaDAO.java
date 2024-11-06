@@ -1,25 +1,17 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package persistencia;
 
 import entidades.Maderera;
 import java.util.ArrayList;
 import java.util.List;
-import persistencia.IMadereraDAO;
 
-/**
- *
- * @author Oley
- */
 public class MaderaDAO implements IMadereraDAO {
 
-private static List<Maderera> maderas = new ArrayList<>();
+private List<Maderera> maderas;
     
     //
     public MaderaDAO() {
-        
+        this.maderas = new ArrayList<>();
     }
 
      public void agregarMadera(Maderera madera) {
@@ -30,6 +22,19 @@ private static List<Maderera> maderas = new ArrayList<>();
         if (!existe) {
             maderas.add(madera);
         }
+    }
+     
+    public boolean actualizarStock(int id, int cantidadComprada) {
+        for (Maderera madera : maderas) {
+            if (madera.getId() == id) {
+                int nuevoStock = madera.getCantidad() - cantidadComprada;
+                if (nuevoStock >= 0) {
+                    madera.setCantidad(nuevoStock);
+                    return true;
+                }
+            }
+        }
+        return false;
     }
 
     public List<Maderera> obtenerMaderas() {

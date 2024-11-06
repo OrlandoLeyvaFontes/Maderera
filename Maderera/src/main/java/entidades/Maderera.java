@@ -1,30 +1,27 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package entidades;
 
-/**
- *
- * @author Oley
- */
 public class Maderera {
-
     private int id;
     private String nombre;
     private String descripcion;
     private int cantidad;
+    private double precioUnitario;
 
+    // Constructor vacío
     public Maderera() {
     }
 
-    public Maderera(int id, String nombre, String descripcion, int cantidad) {
+    // Constructor completo
+    public Maderera(int id, String nombre, String descripcion, int cantidad, double precioUnitario) {
         this.id = id;
         this.nombre = nombre;
         this.descripcion = descripcion;
         this.cantidad = cantidad;
+        this.precioUnitario = precioUnitario;
     }
 
+    // Getters y setters
     public int getId() {
         return id;
     }
@@ -57,4 +54,12 @@ public class Maderera {
         this.cantidad = cantidad;
     }
 
+    public double getPrecioUnitario() {
+        return precioUnitario;
+    }
+
+    public void setPrecioUnitario(double precioUnitario) {
+        this.precioUnitario = precioUnitario;
+    }
 }
+
